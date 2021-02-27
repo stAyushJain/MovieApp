@@ -8,10 +8,11 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface MovieServices {
+//    http://www.omdbapi.com/?i=tt3896198&apikey=9aef8efd
 
     @GET("https://www.omdbapi.com")
     fun searchMovies(
-        @Query("apikey") apiKey: String = "YOUR_API_KEY",
+        @Query("apikey") apiKey: String = "9aef8efd",
         @Query("s") query: String,
         @Query("page") page: Int
     ): Observable<Response<MovieResponseDTO>>
