@@ -12,7 +12,7 @@ interface MovieServices {
 
     @GET("https://www.omdbapi.com")
     fun searchMovies(
-        @Query("apikey") apiKey: String = "9aef8efd",
+        @Query("apikey") apiKey: String = "YOUR_API_KEY",
         @Query("s") query: String,
         @Query("page") page: Int
     ): Observable<Response<MovieResponseDTO>>
