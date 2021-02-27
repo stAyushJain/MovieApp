@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PocketAces</string>
+    <string name="search_movies">Search Movies</string>
+    <string name="min_query_length">Please type atleast 3 characters length word to search.</string>
+    <string name="movies_not_found">!! Movies Not Found !!</string>
+</resources>
