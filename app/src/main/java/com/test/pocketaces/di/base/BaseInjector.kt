@@ -3,11 +3,13 @@ package com.test.pocketaces.di.base
 import android.app.Application
 
 object BaseInjector {
-    private val baseComponent: BaseComponent? = null
+
+    private lateinit var baseComponent: BaseComponent
 
     fun getBaseComponent(application: Application): BaseComponent {
-        return baseComponent
-            ?: DaggerBaseComponent.builder()
+
+        baseComponent = if (::baseComponent.isInitialized ) baseComponent else DaggerBaseComponent.builder()
                 .baseModule(BaseModule(application)).build()
+        return baseComponent
     }
 }

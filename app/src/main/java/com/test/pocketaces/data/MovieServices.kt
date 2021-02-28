@@ -8,7 +8,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface MovieServices {
-//    http://www.omdbapi.com/?i=tt3896198&apikey=9aef8efd
 
     @GET("https://www.omdbapi.com")
     fun searchMovies(
